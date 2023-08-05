@@ -13,6 +13,7 @@ public class BankAccount {
     }
 
     public BankAccount(double balance) {
+
         this.balance = balance;
     }
 
@@ -20,11 +21,12 @@ public class BankAccount {
         return 0.0;
     }
 
-    public void deposit(){
+    public void deposit() {
         System.out.println("Enter the amount you want to deposit: ");
         long amt = sc.nextLong();
         balance += amt;
     }
+
     public void withdraw() {
         long amt;
         System.out.println("Enter the amount you want to withdraw: ");
@@ -33,7 +35,7 @@ public class BankAccount {
             balance = balance - amt;
             System.out.println("Balance after withdraw: " + balance);
         } else {
-            System.out.println("Your balance is less than " + amt + "\n" + "Transaction failed...!!" );
+            System.out.println("Your balance is less than " + amt + "\n" + "Transaction failed...!!");
         }
     }
 
@@ -44,6 +46,6 @@ public class BankAccount {
                 ", balance=" + balance +
                 '}';
     }
-    }
+}
 
 
